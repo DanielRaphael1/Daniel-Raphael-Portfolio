@@ -5,6 +5,7 @@ import Section from './components/Section'
 import Card from './components/Card'
 import ProjectCard from './components/ProjectCard'
 import Button from './components/Button'
+import Language from './components/Language'
 import { FaLinkedin, FaGithub, FaFilePdf } from 'react-icons/fa'
 import { HiOutlineMail, HiOutlinePhone } from 'react-icons/hi'
 import { FiLinkedin, FiGithub } from 'react-icons/fi'
@@ -109,6 +110,7 @@ function App() {
       </Section>
       
       <Section showDivider={true}>
+        <Particles />
         <div style={{ textAlign: 'center' }}>
           <h2 className="section-header gradient-text">About Me</h2>
         </div>
@@ -145,44 +147,29 @@ function App() {
             <div className="about-card-item">
               <h3>Languages</h3>
               <div className="language-bars-container">
-                <div className="language-bar">
-                  <span className="language-flag">🇺🇸</span>
-                  <div className="language-info">
-                    <div className="language-name-level">
-                      <span className="language-name">English</span>
-                      <span className="language-level">Native</span>
-                    </div>
-                    <div className="language-progress">
-                      <div className="language-progress-fill"></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="language-bar">
-                  <span className="language-flag">🇮🇱</span>
-                  <div className="language-info">
-                    <div className="language-name-level">
-                      <span className="language-name">Hebrew</span>
-                      <span className="language-level">Native</span>
-                    </div>
-                    <div className="language-progress">
-                      <div className="language-progress-fill"></div>
-                    </div>
-                  </div>
-                </div>
+                <Language flag="🇺🇸" name="English" level="Native" />
+                <Language flag="🇮🇱" name="Hebrew" level="Native" />
               </div>
-              <p style={{ fontSize: '0.85rem', opacity: '0.8', marginTop: '10px' }}>
-              </p>
             </div>
             <div className="about-card-item">
               <h3>Fun Fact</h3>
               <p>Big fan of chess here, always up for a game!</p>
             </div>
           </div>
-
-
         </Card>
       </Section> 
+
+        <Section showDivider={true}>
+        <Particles />
+        <div style={{ textAlign: 'center' }}>
+          <h2 className="section-header gradient-text">My Stack</h2>
+        </div>
+
+      </Section>
+
+
           <Section className="content-section1" showDivider={true}>
+            <Particles />
         <div style={{ textAlign: 'center' }}>
           <h2 className="section-header gradient-text">Featured Projects</h2>
         </div>
@@ -202,6 +189,7 @@ function App() {
           ))}
         </Card>
       </Section>
+
     </div>
     
   )
