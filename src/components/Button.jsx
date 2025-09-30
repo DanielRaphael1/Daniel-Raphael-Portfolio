@@ -77,8 +77,8 @@ const Button = ({
     return {
       ...baseStyles,
       ...variantStyles[variant]
-    };
-  };
+    }
+  }
 
   const styles = getButtonStyles();
   const combinedClassName = `button-${variant} ${className}`.trim();
@@ -126,7 +126,7 @@ const Button = ({
     >
       {children}
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

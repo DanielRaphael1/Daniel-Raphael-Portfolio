@@ -1,9 +1,14 @@
 const Card = ({ children, variant = 'default', className = '', style = {} }) => {
+  const baseStyles = {
+    borderRadius: '12px',
+    ...style
+  }
+
   return (
-    <div className={`card card-${variant} ${className}`} style={style}>
+    <div className={`card-${variant} ${className}`} style={baseStyles}>
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card
